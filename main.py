@@ -5,6 +5,7 @@ import random
 # Create bot instance with command prefix '!'
 intents = discord.Intents.default()
 intents.message_content = True
+intents.members = True  # Enable members intent
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Separate lists for welcome messages, additional texts, and images
