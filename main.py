@@ -49,11 +49,12 @@ async def on_member_join(member):
   embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
   embed.set_image(url=image)
 
-  # Send to the first text channel we can find
-  for channel in member.guild.text_channels:
-    if channel.permissions_for(member.guild.me).send_messages:
+  # Send to specific channel
+  channel_id = int(os.getenv('WELCOME_CHANNEL_ID', '0'))  # Get channel ID from secrets
+  if channel_id:
+    channel = member.guild.get_channel(channel_id)
+    if channel and channel.permissions_for(member.guild.me).send_messages:
       await channel.send(embed=embed)
-      break
 
 
 @bot.command(name='welcome')
