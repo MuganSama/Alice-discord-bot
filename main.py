@@ -38,9 +38,10 @@ async def on_member_join(member):
   image = random.choice(welcome_images)
 
   # Create embed
-  embed = discord.Embed(title="Welcome!",
+  embed = discord.Embed(title=f"Welcome {member.name}!",
                         description=f"{member.mention}, {greeting}\n{message}",
                         color=discord.Color.blue())
+  embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
   embed.set_image(url=image)
 
   # Send to the first text channel we can find
