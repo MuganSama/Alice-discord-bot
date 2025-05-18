@@ -44,4 +44,5 @@ async def welcome(ctx):
     await ctx.send(embed=embed)
 
 # Replace 'YOUR_TOKEN' with your bot token in the secrets
-bot.run('YOUR_TOKEN')
+import os
+bot.run(os.getenv('DISCORD_TOKEN'))
