@@ -24,9 +24,9 @@ welcome_messages = [
 ]
 
 welcome_images = [
-    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282694424875028/welcome1.gif",
-    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282693946617896/welcome2.gif",
-    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282693489635368/welcome3.gif"
+    "https://imgs.search.brave.com/qoDl7UYezLvsqV1Z6UtT8SMHByDYmOgNL-s0fW7D3BI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS8zMy84/OC9aa1FnQ2YuanBn",  # Discord welcome banner
+    "https://imgs.search.brave.com/0VMzOCGO6doQAZEsJCpoN2tv5h1Rm1QV-zGGx74cYyo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8zMDcv/NDUwL0hELXdhbGxw/YXBlci1hbmltZS1t/eS1kcmVzcy11cC1k/YXJsaW5nLW1hcmlu/LWtpdGFnYXdhLmpw/Zw",  # Discord celebration image
+    "https://imgs.search.brave.com/J0Bnyw8s8pXHdoFI24aXbpenEFFd_8T1zYfA-3QNn2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hbml5/dWtpLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMi9h/bml5dWtpLW1ha2lt/YS03Mi5qcGc",  # Discord welcome wave
 ]
 
 
