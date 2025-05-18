@@ -23,9 +23,9 @@ welcome_messages = [
 ]
 
 welcome_images = [
-    "https://imgs.search.brave.com/qoDl7UYezLvsqV1Z6UtT8SMHByDYmOgNL-s0fW7D3BI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS8zMy84/OC9aa1FnQ2YuanBn",  # Discord welcome banner
-    "https://imgs.search.brave.com/0VMzOCGO6doQAZEsJCpoN2tv5h1Rm1QV-zGGx74cYyo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8zMDcv/NDUwL0hELXdhbGxw/YXBlci1hbmltZS1t/eS1kcmVzcy11cC1k/YXJsaW5nLW1hcmlu/LWtpdGFnYXdhLmpw/Zw",  # Discord celebration image
-    "https://imgs.search.brave.com/J0Bnyw8s8pXHdoFI24aXbpenEFFd_8T1zYfA-3QNn2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hbml5/dWtpLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMi9h/bml5dWtpLW1ha2lt/YS03Mi5qcGc",  # Discord welcome wave
+    "https://i.imgur.com/NQMXpwG.png",  # Anime welcome banner
+    "https://i.imgur.com/ZHV3Zr5.png",  # Anime celebration
+    "https://i.imgur.com/wWm3HUA.png",  # Anime welcome wave
 ]
 
 
