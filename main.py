@@ -23,8 +23,10 @@ welcome_messages = [
 ]
 
 welcome_images = [
-    " https://shorturl.at/LDTta", "https://shorturl.at/bKNre",
-    "https://shorturl.at/TXYEq", " https://shorturl.at/z6RjX "
+    "https://i.imgur.com/h4YkTUZ.png",  # Discord welcome banner
+    "https://i.imgur.com/ZHV3Zr5.png",  # Discord celebration image
+    "https://i.imgur.com/wWm3HUA.png",  # Discord welcome wave
+    "https://i.imgur.com/q9GV8sJ.png"   # Discord greeting image
 ]
 
 
