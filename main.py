@@ -24,9 +24,9 @@ welcome_messages = [
 ]
 
 welcome_images = [
-    "https://i.imgur.com/NQMXpwG.png",  # Anime welcome banner
-    "https://i.imgur.com/ZHV3Zr5.png",  # Anime celebration
-    "https://i.imgur.com/wWm3HUA.png",  # Anime welcome wave
+    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282694424875028/welcome1.gif",
+    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282693946617896/welcome2.gif",
+    "https://cdn.discordapp.com/attachments/1141282552384622635/1141282693489635368/welcome3.gif"
 ]
 
 
