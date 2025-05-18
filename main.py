@@ -8,20 +8,23 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# List of welcome messages with their corresponding images
+# Separate lists for welcome messages, additional texts, and images
+welcome_greetings = [
+    "Welcome to our awesome server! 🎉",
+    "A wild new member appears! ⭐",
+    "Welcome aboard! 🚀"
+]
+
 welcome_messages = [
-    {
-        "text": "Welcome to our awesome server! 🎉",
-        "image": "https://i.imgur.com/example1.png"
-    },
-    {
-        "text": "Glad to have you here! 🌟",
-        "image": "https://i.imgur.com/example2.png"
-    },
-    {
-        "text": "Welcome aboard! Let's have fun! 🚀",
-        "image": "https://i.imgur.com/example3.png"
-    }
+    "Hope you'll have a great time here!",
+    "Feel free to introduce yourself!",
+    "Don't forget to check out our rules!"
+]
+
+welcome_images = [
+    "https://i.imgur.com/example1.png",
+    "https://i.imgur.com/example2.png",
+    "https://i.imgur.com/example3.png"
 ]
 
 @bot.event
@@ -30,16 +33,18 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    # Select random welcome message
+    # Select random messages and image
+    greeting = random.choice(welcome_greetings)
     message = random.choice(welcome_messages)
+    image = random.choice(welcome_images)
     
     # Create embed
     embed = discord.Embed(
         title="Welcome!",
-        description=f"{member.mention}, {message['text']}",
+        description=f"{member.mention}, {greeting}\n{message}",
         color=discord.Color.blue()
     )
-    embed.set_image(url=message["image"])
+    embed.set_image(url=image)
     
     # Send to the first text channel we can find
     for channel in member.guild.text_channels:
@@ -49,16 +54,18 @@ async def on_member_join(member):
 
 @bot.command(name='welcome')
 async def welcome(ctx):
-    # Select random welcome message
+    # Select random messages and image
+    greeting = random.choice(welcome_greetings)
     message = random.choice(welcome_messages)
+    image = random.choice(welcome_images)
     
     # Create embed
     embed = discord.Embed(
         title="Welcome!",
-        description=message["text"],
+        description=f"{greeting}\n{message}",
         color=discord.Color.blue()
     )
-    embed.set_image(url=message["image"])
+    embed.set_image(url=image)
     
     await ctx.send(embed=embed)
 
