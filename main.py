@@ -23,10 +23,9 @@ welcome_messages = [
 ]
 
 welcome_images = [
-    "https://i.imgur.com/h4YkTUZ.png",  # Discord welcome banner
-    "https://i.imgur.com/ZHV3Zr5.png",  # Discord celebration image
-    "https://i.imgur.com/wWm3HUA.png",  # Discord welcome wave
-    "https://i.imgur.com/q9GV8sJ.png"   # Discord greeting image
+    "https://imgs.search.brave.com/qoDl7UYezLvsqV1Z6UtT8SMHByDYmOgNL-s0fW7D3BI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS8zMy84/OC9aa1FnQ2YuanBn",  # Discord welcome banner
+    "https://imgs.search.brave.com/0VMzOCGO6doQAZEsJCpoN2tv5h1Rm1QV-zGGx74cYyo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8zMDcv/NDUwL0hELXdhbGxw/YXBlci1hbmltZS1t/eS1kcmVzcy11cC1k/YXJsaW5nLW1hcmlu/LWtpdGFnYXdhLmpw/Zw",  # Discord celebration image
+    "https://imgs.search.brave.com/J0Bnyw8s8pXHdoFI24aXbpenEFFd_8T1zYfA-3QNn2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hbml5/dWtpLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMi9h/bml5dWtpLW1ha2lt/YS03Mi5qcGc",  # Discord welcome wave
 ]
 
 
@@ -50,7 +49,8 @@ async def on_member_join(member):
   embed.set_image(url=image)
 
   # Send to specific channel
-  channel_id = int(os.getenv('WELCOME_CHANNEL_ID', '0'))  # Get channel ID from secrets
+  channel_id = int(os.getenv('WELCOME_CHANNEL_ID',
+                             '0'))  # Get channel ID from secrets
   if channel_id:
     channel = member.guild.get_channel(channel_id)
     if channel and channel.permissions_for(member.guild.me).send_messages:
@@ -65,7 +65,7 @@ async def welcome(ctx):
   image = random.choice(welcome_images)
 
   # Create embed
-  embed = discord.Embed(title="Welcome!",
+  embed = discord.Embed(title="THE SUMMONING PORTAL",
                         description=f"{greeting}\n{message}",
                         color=discord.Color.blue())
   embed.set_image(url=image)
