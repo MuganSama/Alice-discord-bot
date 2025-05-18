@@ -10,18 +10,21 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Separate lists for welcome messages, additional texts, and images
 welcome_greetings = [
-    "Welcome to our awesome server! 🎉", "A wild new member appears! ⭐",
-    "Welcome aboard! 🚀"
+    "Welcome! {member.name}", "Yo! {member.name}", "Hey there {member.name}",
+    " Konnichiwa {member.name}"
 ]
 
 welcome_messages = [
-    "Hope you'll have a great time here!", "Feel free to introduce yourself!",
-    "Don't forget to check out our rules!"
+    "🔥A new soul enters the serververse — show us your power!",
+    "✨ New member detected. Booting up anime-core systems...",
+    "⚔️ You've entered the realm — gear up and enjoy the vibes!",
+    "💠May your path through pixels and plotlines be epic! ",
+    "🌸 You're among legends now — let's make some memories!"
 ]
 
 welcome_images = [
-    " https://shorturl.at/LDTta",    "https://shorturl.at/bKNre",
-    "https://shorturl.at/TXYEq"
+    " https://shorturl.at/LDTta", "https://shorturl.at/bKNre",
+    "https://shorturl.at/TXYEq", " https://shorturl.at/z6RjX "
 ]
 
 
@@ -38,7 +41,7 @@ async def on_member_join(member):
   image = random.choice(welcome_images)
 
   # Create embed
-  embed = discord.Embed(title=f"Welcome {member.name}!",
+  embed = discord.Embed(title=f"THE SUMMONING PORTAL",
                         description=f"{member.mention}, {greeting}\n{message}",
                         color=discord.Color.blue())
   embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
