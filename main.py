@@ -45,6 +45,7 @@ async def on_member_join(member):
       description=f" {greeting}, {member.mention}\n{message}",
       color=discord.Color.blue())
   embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
+  embed.set_thumbnail(url=member.display_avatar.url)
   embed.set_image(url=image)
 
   # Send to specific channel
@@ -60,11 +61,12 @@ async def on_member_join(member):
 async def on_member_remove(member):
   # Get the remaining member count (excluding bots)
   remaining_members = len([m for m in member.guild.members if not m.bot])
-  
+
   # Create goodbye embed
   embed = discord.Embed(
       title="🌙 FAREWELL PORTAL",
-      description=f"**{member.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
+      description=
+      f"**{member.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
       color=discord.Color.red())
   embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
   embed.set_thumbnail(url=member.display_avatar.url)
@@ -88,6 +90,7 @@ async def welcome(ctx):
   embed = discord.Embed(title="THE SUMMONING PORTAL",
                         description=f"{greeting}\n{message}",
                         color=discord.Color.blue())
+  embed.set_thumbnail(url=ctx.author.display_avatar.url)
   embed.set_image(url=image)
 
   await ctx.send(embed=embed)
@@ -97,11 +100,12 @@ async def welcome(ctx):
 async def test_goodbye(ctx):
   # Get the remaining member count (excluding bots)
   remaining_members = len([m for m in ctx.guild.members if not m.bot])
-  
+
   # Create goodbye embed using the command author as example
   embed = discord.Embed(
       title="🌙 FAREWELL PORTAL",
-      description=f"**{ctx.author.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
+      description=
+      f"**{ctx.author.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
       color=discord.Color.red())
   embed.set_footer(text=f"User: {ctx.author.name}#{ctx.author.discriminator}")
   embed.set_thumbnail(url=ctx.author.display_avatar.url)
