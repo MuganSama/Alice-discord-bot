@@ -93,6 +93,22 @@ async def welcome(ctx):
   await ctx.send(embed=embed)
 
 
+@bot.command(name='testgoodbye')
+async def test_goodbye(ctx):
+  # Get the remaining member count (excluding bots)
+  remaining_members = len([m for m in ctx.guild.members if not m.bot])
+  
+  # Create goodbye embed using the command author as example
+  embed = discord.Embed(
+      title="🌙 FAREWELL PORTAL",
+      description=f"**{ctx.author.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
+      color=discord.Color.red())
+  embed.set_footer(text=f"User: {ctx.author.name}#{ctx.author.discriminator}")
+  embed.set_thumbnail(url=ctx.author.display_avatar.url)
+
+  await ctx.send(embed=embed)
+
+
 # Replace 'YOUR_TOKEN' with your bot token in the secrets
 import os
 
