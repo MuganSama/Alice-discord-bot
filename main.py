@@ -88,8 +88,9 @@ async def welcome(ctx):
 
   # Create embed
   embed = discord.Embed(title="THE SUMMONING PORTAL",
-                        description=f"{greeting}\n{message}",
+                        description=f"{greeting}, {ctx.author.mention}\n{message}",
                         color=discord.Color.blue())
+  embed.set_footer(text=f"User: {ctx.author.name}#{ctx.author.discriminator}")
   embed.set_thumbnail(url=ctx.author.display_avatar.url)
   embed.set_image(url=image)
 
