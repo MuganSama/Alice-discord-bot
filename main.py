@@ -56,6 +56,27 @@ async def on_member_join(member):
       await channel.send(embed=embed)
 
 
+@bot.event
+async def on_member_remove(member):
+  # Get the remaining member count (excluding bots)
+  remaining_members = len([m for m in member.guild.members if not m.bot])
+  
+  # Create goodbye embed
+  embed = discord.Embed(
+      title="🌙 FAREWELL PORTAL",
+      description=f"**{member.name}** has left the server.\n\n👥 **{remaining_members}** members remaining in our realm.",
+      color=discord.Color.red())
+  embed.set_footer(text=f"User: {member.name}#{member.discriminator}")
+  embed.set_thumbnail(url=member.display_avatar.url)
+
+  # Send to the same channel as welcome messages
+  channel_id = int(os.getenv('WELCOME_CHANNEL_ID', '0'))
+  if channel_id:
+    channel = member.guild.get_channel(channel_id)
+    if channel and channel.permissions_for(member.guild.me).send_messages:
+      await channel.send(embed=embed)
+
+
 @bot.command(name='welcome')
 async def welcome(ctx):
   # Select random messages and image
