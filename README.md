@@ -8,7 +8,8 @@ A custom, event-driven Discord bot that automatically greets new server members 
 * **Automated Farewells:** Tracks the `on_member_remove` event to post a goodbye message, which dynamically calculates and displays the remaining human member count in the server.
 * **Admin Testing Commands:** Includes `!welcome` and `!testgoodbye` commands so server administrators can preview the embeds and test permissions without having to wait for a user to join or leave.
 
-* ![IMG_20260325_211426](https://github.com/user-attachments/assets/138823a6-0cc7-4a5c-b3a9-69e7f8a![IMG_20260325_211413](https://github.com/user-attachments/assets/873dae35-2120-4b37-890e-383e7b2c9243)
+* ![IMG_20260325_211426](https://github.com/user-attachments/assets/138823a6-0cc7-4a5c-b3a9-69e7f8a
+* ![IMG_20260325_211413](https://github.com/user-attachments/assets/873dae35-2120-4b37-890e-383e7b2c9243)
 c6654)
 
 ## 🛠️ Tech Stack
