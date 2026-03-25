@@ -7,7 +7,8 @@ A custom, event-driven Discord bot that automatically greets new server members 
 * **Dynamic Generation:** Randomly selects from a curated pool of greetings, immersive messages ("Booting up anime-core systems..."), and aesthetic image banners so the welcome message feels fresh every time.
 * **Automated Farewells:** Tracks the `on_member_remove` event to post a goodbye message, which dynamically calculates and displays the remaining human member count in the server.
 * **Admin Testing Commands:** Includes `!welcome` and `!testgoodbye` commands so server administrators can preview the embeds and test permissions without having to wait for a user to join or leave.
-![IMG_20260325_211426](https://github.com/user-attachments/assets/57ae0630-fb93-4b90-badf-1c4b100b93c7) ![IMG_20260325_211413](https://github.com/user-attachments/assets/873dae35-2120-4b37-890e-383e7b2c9243)
+![IMG_20260325_211426](https://github.com/user-attachments/assets/57ae0630-fb93-4b90-badf-1c4b100b93c7) ![IMG_20260325_211413](https://github.com/user-attachments/assets/873dae35-2120-4b37-890e-383e7b2c9243) <img width="567" height="306" alt="Screenshot 2026-03-25 213304" src="https://github.com/user-attachments/assets/22f04042-c050-466c-b205-ef2274a2ea5a" />
+
 
 ## 🛠️ Tech Stack
 * **Language:** Python
